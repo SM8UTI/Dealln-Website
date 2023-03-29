@@ -1,0 +1,45 @@
+.lodder {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  max-height: 100vh;
+
+  position: fixed;
+
+  display: grid;
+  place-content: center;
+
+  z-index: 9999 !important;
+  background-color: var(--bg-main);
+
+  span {
+    font-size: 4rem;
+    font-weight: 600;
+    opacity: 0;
+    scale: 0;
+  }
+
+  #lodder-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    display: inline-block;
+    width: 0%;
+    height: 5px;
+    background-color: var(--bg-primary);
+
+    div {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      translate: 0 -50%;
+      width: 100vw;
+      height: 0%;
+      background-color: var(--lightDark-primary);
+      opacity: 50%;
+    }
+  }
+}
