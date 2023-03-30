@@ -15,6 +15,7 @@
   --bg-main: #050e0c;
   --bg-primary: #0dd8a4;
   --text: #fff;
+  --btn-text: #fff;
   --button: #0dd8a4;
 }
 
@@ -25,7 +26,37 @@
   --bg-primary: #0dd8a4;
   --text: #344251;
   --sub-text: #a3a3a3;
+  --btn-text: #fff;
   --button: #344251;
+}
+
+$breakpoints-up: (
+  "x-large": 75rem,
+  // 1200
+  "large": 62.5rem,
+  // 1000
+  "small": 48rem,
+  // 768
+  "mobile": 33.875rem,
+  // 432
+);
+
+$breakpoints-down: (
+  "x-large": 74.9375rem,
+  "large": 62.4375rem,
+  "small": 47.937rem,
+  "mobile": 33.8125rem,
+);
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down,$size)) {
+    @content;
+  }
+}
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up,$size)) {
+    @content;
+  }
 }
 
 *,
@@ -91,6 +122,8 @@ p {
   height: 100%;
   min-height: 100vh;
 
+  z-index: -1;
+
   div {
     width: 2px;
     height: 100%;
@@ -104,6 +137,9 @@ p {
   bottom: 2rem;
   right: 2rem;
   background-color: var(--bg-main);
+  z-index: 9999;
+  padding: 1rem;
+  border-radius: 50%;
   .toggle {
     --size: 3rem;
 
@@ -139,5 +175,189 @@ p {
         var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0
           var(--ray-size);
     }
+  }
+}
+
+.anime-hover {
+  width: 100%;
+  height: 100%;
+  max-width: max-content;
+  white-space: nowrap;
+  padding: 0.5rem 0.5rem;
+  position: relative;
+  transition: color 0.6s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--bg-primary);
+    z-index: -1;
+    transition: height 0.4s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+  }
+
+  &:hover {
+    color: var(--bg-primary);
+    &::after {
+      animation: anime1 1s linear;
+    }
+  }
+
+  @keyframes anime1 {
+    0% {
+      height: 5%;
+      opacity: 1;
+    }
+    50% {
+      height: 100%;
+      opacity: 0.5;
+    }
+    100% {
+      height: 5%;
+      opacity: 1;
+    }
+  }
+}
+
+.btn {
+  width: 150px;
+  height: 40px;
+  font-size: 1.6rem;
+  background-color: var(--bg-primary);
+  color: var(--btn-text);
+  padding: 0.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-transform: capitalize;
+  overflow: hidden;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+
+  span {
+    translate: 0 -4.2rem;
+    transition: all 0.6s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+  }
+
+  &:hover {
+    span {
+      translate: 0 0;
+    }
+  }
+}
+
+// header
+
+.header {
+  padding: 1rem;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    .menu {
+      --gap: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: var(--gap);
+      font-size: 1.5rem;
+      font-weight: 400;
+      .navigation {
+        display: flex;
+        align-items: center;
+        gap: var(--gap);
+      }
+    }
+
+    @include breakpoint-down(large) {
+      .menu {
+        .navigation {
+          display: none;
+        }
+      }
+    }
+
+    @include breakpoint-down(mobile) {
+      padding: 0;
+      .logo {
+        &::after {
+          left: -2.4rem !important;
+        }
+      }
+      .btn {
+        display: none;
+      }
+    }
+  }
+
+  .hamMenu {
+    display: none;
+    width: 50px;
+    aspect-ratio: 1;
+    padding: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 9999;
+
+    @include breakpoint-down(large) {
+      display: flex;
+    }
+
+    span {
+      display: inline-block;
+      width: 100%;
+      height: 0.3rem;
+      background-color: var(--bg-primary);
+      border-radius: 1rem;
+      transform-origin: 2px 2px;
+      &:nth-child(2) {
+        translate: 6px 0;
+      }
+
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  .hamMenu.active {
+    span {
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:first-child {
+        rotate: 45deg;
+      }
+
+      &:last-child {
+        rotate: -45deg;
+      }
+    }
+  }
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -3rem;
+    width: 20px;
+    height: 100%;
+    background-color: var(--bg-primary);
+    z-index: 1;
+    border-radius: 2px;
   }
 }

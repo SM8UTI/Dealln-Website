@@ -10,7 +10,7 @@ const tl = gsap.timeline();
 const Home = () => {
   return (
     <>
-      {/* <Loder tl={tl} /> */}
+      <Loder tl={tl} />
       <FixedElem />
       <DarkLight />
       <Header tl={tl} />

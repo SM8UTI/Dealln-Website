@@ -1,3 +1,30 @@
 const logoName = "Dealln";
 
-export { logoName };
+const menuNavigationLinks = [
+  {
+    text: "Prices & Access",
+    link: "#",
+  },
+  {
+    text: "Statistics",
+    link: "#",
+  },
+  {
+    text: "Insights",
+    link: "#",
+  },
+  {
+    text: "Services",
+    link: "#",
+  },
+  {
+    text: "About",
+    link: "#",
+  },
+  {
+    text: "Contact",
+    link: "#",
+  },
+];
+
+export { logoName, menuNavigationLinks };
