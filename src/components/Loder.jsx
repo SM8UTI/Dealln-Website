@@ -24,7 +24,7 @@ const Loder = ({ tl }) => {
     });
     tl.to(ll.current, {
       width: "100%",
-      duration: 1.5,
+      duration: 1,
       delay: -0.5,
       ease: "power3.out",
     });
@@ -32,7 +32,7 @@ const Loder = ({ tl }) => {
       ll.current,
       {
         height: "100%",
-        duration: 1.5,
+        duration: 1,
         ease: "power3.out",
       },
       "-=0.5"
@@ -44,7 +44,7 @@ const Loder = ({ tl }) => {
         duration: 1.5,
         ease: "slow(0.7, 0.7, false)",
       },
-      "-=1"
+      "-=0.5"
     );
     tl.to(llParrent.current, {
       minHeight: "0vh",
