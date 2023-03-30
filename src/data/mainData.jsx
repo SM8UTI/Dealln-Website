@@ -27,4 +27,11 @@ const menuNavigationLinks = [
   },
 ];
 
-export { logoName, menuNavigationLinks };
+const heroSection = {
+  title: "Data-driven solutions for",
+  titleSpan: "modern businesses",
+  desc: "With our powerful data solutions, you'll have the tools and insights you need to maximize your business potential and stay ahead of the competition.",
+  button: "Explore More",
+};
+
+export { logoName, menuNavigationLinks, heroSection };

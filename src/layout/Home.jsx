@@ -4,16 +4,20 @@ import Loder from "../components/Loder";
 import gsap from "gsap";
 import Header from "../components/Header";
 import DarkLight from "../components/DarkLight";
+import Hero from "../components/Hero";
 
-const tl = gsap.timeline();
+const tl = gsap.timeline({
+  ease: "power3.out",
+});
 
 const Home = () => {
   return (
     <>
-      {/* <Loder tl={tl} /> */}
+      <Loder tl={tl} />
       <FixedElem />
       <DarkLight />
-      <Header tl={tl} />
+      <Header />
+      <Hero tl={tl} />
     </>
   );
 };
