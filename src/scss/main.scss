@@ -71,6 +71,12 @@ $breakpoints-down: (
 
 html {
   font-size: 62.5%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @include breakpoint-down(small) {
     font-size: 55.5% !important;
@@ -498,9 +504,14 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px - 10vh);
+
+    @include breakpoint-down(small) {
+      min-height: calc(100vh - 100px);
+    }
 
     .text {
       display: flex;
@@ -546,5 +557,29 @@ h2 {
         height: 100%;
       }
     }
+  }
+}
+
+// Mainimage
+
+.Mainimage {
+  // border: 2px solid red;
+  display: grid;
+  place-content: center;
+  // overflow: hidden;
+  width: 100%;
+  height: 600px;
+
+  @include breakpoint-down(small) {
+    height: 600px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    height: 600px;
+    object-fit: contain;
+    scale: 0;
+    opacity: 0;
+    translate: 0 100px;
   }
 }
