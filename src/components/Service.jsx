@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 
 const Service = () => {
-  const [index, setIndex] = useState(null);
+  const [index, setIndex] = useState(0);
   useEffect(() => {
     gsap.to(".main-text h2", {
       x: 0,
@@ -35,7 +35,36 @@ const Service = () => {
         scrub: 4,
       },
     });
+    gsap.to(".Service-2 .text-container .text-card", {
+      scrollTrigger: {
+        trigger: ".Service-2",
+        start: "top 90%",
+        end: "bottom 100%",
+        markers: true,
+        scrub: 1,
+      },
+      y: 0,
+      opacity: 1,
+      stagger: 1,
+    });
+    gsap.to(".Service-2 .image-container", {
+      scrollTrigger: {
+        trigger: ".Service-2",
+        start: "top 100%",
+        end: "bottom 100%",
+        markers: true,
+        scrub: 1,
+      },
+      width: "100%",
+      opacity: 1,
+      scale: 1,
+      // stagger: 1,
+    });
   }, []);
+  const enterCard = (ind) => {
+    setIndex(ind);
+  };
+
   return (
     <div className="Services max">
       <span className="sub-text">{ServiceSection[0].subText}</span>
@@ -60,7 +89,7 @@ const Service = () => {
             <div
               className="text-card"
               key={index}
-              onClick={() => setIndex(index)}
+              onMouseEnter={() => enterCard(index)}
             >
               <h3>{elem.text}</h3>
               <p>{elem.desc}</p>
@@ -68,9 +97,10 @@ const Service = () => {
           ))}
         </div>
         <div className="image-container">
-          {ServiceSection[2].map((elem, index) => (
-            <img src={elem.image} alt={elem.text} key={index} />
-          ))}
+          <img
+            src={ServiceSection[2][index].image}
+            alt={ServiceSection[2][index].text}
+          />
         </div>
       </div>
     </div>
