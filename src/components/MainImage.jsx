@@ -5,10 +5,25 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MainImage = ({ tl }) => {
+const MainImage = () => {
   useEffect(() => {
     gsap.to(".Mainimage img", {
-      progress: 0.8,
+      scrollTrigger: {
+        trigger: ".Mainimage",
+        start: "top 90%",
+        end: "top 100px",
+        scrub: true,
+        // markers: true,
+      },
+      scale: 1,
+      opacity: 1,
+      ease: "power3.out",
+      //   duration: 2,
+    });
+    gsap.to(".Mainimage .line", {
+      width: "100%",
+      delay: 4,
+      ease: "power2.out",
       scrollTrigger: {
         trigger: ".Mainimage",
         start: "top 90%",
@@ -17,16 +32,12 @@ const MainImage = ({ tl }) => {
         // markers: true,
         //   toggleActions: "restart complete complete reverse",
       },
-      scale: 1,
-      opacity: 1,
-      y: 0,
-      ease: "power3.out",
-      //   duration: 2,
     });
-  }, [tl]);
+  }, []);
   return (
     <div className="Mainimage">
       <img src={image} alt="main-image" />
+      <div className="line"></div>
     </div>
   );
 };
