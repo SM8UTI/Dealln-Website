@@ -132,6 +132,10 @@ h2 {
   font-size: 3.8rem;
 }
 
+h3 {
+  font-size: 2.4rem;
+}
+
 .fixedElem {
   position: fixed;
   top: 0;
@@ -683,6 +687,60 @@ h2 {
         }
       }
     }
+  }
+
+  .Service-2 {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    // border: 2px solid blue;
+
+    @include breakpoint(small) {
+      grid-template-columns: 1fr 1fr;
+
+      .image-container {
+        max-height: 550px !important;
+      }
+    }
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .text-card {
+        flex-grow: 1;
+        padding: 1rem;
+        background-color: rgb(13 216 164 / 8%);
+        backdrop-filter: blur(4px);
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+      }
+    }
+
+    .image-container {
+      width: 100%;
+      height: 100%;
+      max-height: 350px;
+      // border: 2px solid red;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+.light .Services .Service-2 .text-card {
+  background-color: rgba(189, 255, 239, 0.8) !important;
+  // color: var(--btn-text);
+  p {
+    color: #272727;
   }
 }
 
