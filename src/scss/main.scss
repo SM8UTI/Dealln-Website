@@ -756,6 +756,82 @@ h3 {
   }
 }
 
+.Service-3 {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  .service-card {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    border: 2px solid var(--bg-primary);
+    border-radius: 0.5rem;
+    gap: 2rem;
+
+    opacity: 0;
+    // scale: 0;
+    translate: -500px 0;
+
+    .text {
+      border-top: 2px solid var(--bg-primary);
+      padding: 3rem 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    img {
+      margin-left: auto;
+      width: 100%;
+      height: 100%;
+      max-width: 200px;
+      max-height: 200px;
+      object-fit: contain;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    .service-card {
+      padding: 2rem !important;
+    }
+  }
+
+  @include breakpoint(small) {
+    grid-template-columns: 1fr 1fr;
+    .service-card {
+      gap: 2rem;
+      &:last-child {
+        grid-column: span 2;
+      }
+      img {
+        margin-left: 0;
+        margin-inline: auto;
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr 1fr;
+    .service-card {
+      min-height: 500px;
+      img {
+        max-width: 280px !important;
+        max-height: 280px !important;
+      }
+
+      &:last-child {
+        grid-column: span 1;
+      }
+    }
+  }
+}
+
 .light .Services .Service-2 .text-card {
   background-color: rgba(189, 255, 239, 0.8) !important;
   // color: var(--btn-text);

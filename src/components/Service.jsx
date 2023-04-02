@@ -3,6 +3,10 @@ import { ServiceSection } from "../data/mainData";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 
+import analytic from "../Assets/analytic.svg";
+import integration from "../Assets/integration.svg";
+import visual from "../Assets/visual.svg";
+
 const Service = () => {
   const [index, setIndex] = useState(0);
   useEffect(() => {
@@ -60,6 +64,19 @@ const Service = () => {
       scale: 1,
       // stagger: 1,
     });
+    gsap.to(".Service-3 .service-card", {
+      scrollTrigger: {
+        trigger: ".Service-3",
+        start: "top 100%",
+        end: "bottom 100%",
+        // markers: true,
+        scrub: 1,
+      },
+      x: 0,
+      opacity: 1,
+      // scale: 1,
+      stagger: 1,
+    });
   }, []);
   const enterCard = (ind) => {
     setIndex(ind);
@@ -101,6 +118,30 @@ const Service = () => {
             src={ServiceSection[2][index].image}
             alt={ServiceSection[2][index].text}
           />
+        </div>
+      </div>
+
+      <div className="Service-3 max">
+        <div className="service-card">
+          <img src={integration} alt={ServiceSection[3][0].text} />
+          <div className="text">
+            <h3>{ServiceSection[3][0].text}</h3>
+            <p>{ServiceSection[3][0].desc}</p>
+          </div>
+        </div>
+        <div className="service-card">
+          <img src={visual} alt={ServiceSection[3][1].text} />
+          <div className="text">
+            <h3>{ServiceSection[3][1].text}</h3>
+            <p>{ServiceSection[3][1].desc}</p>
+          </div>
+        </div>
+        <div className="service-card">
+          <img src={analytic} alt={ServiceSection[3][2].text} />
+          <div className="text">
+            <h3>{ServiceSection[3][2].text}</h3>
+            <p>{ServiceSection[3][2].desc}</p>
+          </div>
         </div>
       </div>
     </div>
