@@ -868,8 +868,12 @@ h3 {
 
     img {
       width: 100%;
-      max-width: 350px;
+      max-width: 150px;
       margin-right: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      max-width: 350px;
     }
   }
 }
