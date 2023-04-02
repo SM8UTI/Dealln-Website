@@ -881,6 +881,44 @@ h3 {
   .sub-text {
     margin-left: auto;
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    .category-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        li {
+          font-size: 1.6rem;
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          border: 2px solid var(--bg-primary);
+          border-radius: 1rem;
+          text-transform: capitalize;
+
+          cursor: pointer;
+          transition: scale 0.6s ease-in-out, color 0.7s ease-in-out;
+
+          @include breakpoint(small) {
+            padding: 0.5rem 3rem;
+          }
+
+          &:hover {
+            scale: 1.09;
+            background-color: var(--bgs-primary);
+          }
+        }
+      }
+    }
+  }
 }
 
 button {
@@ -931,7 +969,7 @@ button {
       outline: none;
     }
 
-    button{
+    button {
       margin-inline: auto;
       width: 100%;
     }
@@ -944,11 +982,52 @@ button {
         padding: 1rem 2rem;
       }
 
-      button{
+      button {
         margin: 0;
 
         width: max-content;
       }
+    }
+  }
+}
+
+.btn-s {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  color: var(--bg-primary);
+  position: relative;
+  max-width: max-content;
+
+  div {
+    display: grid;
+    place-content: center;
+  }
+  svg {
+    fill: var(--bg-primary);
+    width: 50px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &::after {
+    transition: all 0.4s ease-in-out;
+    content: "";
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--bg-primary);
+    border-radius: 1rem;
+  }
+
+  &:hover {
+    svg {
+      translate: 10px 0;
+    }
+    &::after {
+      width: 80%;
     }
   }
 }
