@@ -14,12 +14,14 @@
   --sub-text: #d2d4d6;
   --bg-main: #050e0c;
   --bg-primary: #0dd8a4;
+  --bgs-primary: rgb(13 216 164 / 8%);
   --text: #fff;
   --btn-text: #fff;
   --button: #0dd8a4;
 }
 
 .light {
+  --bgs-primary: rgba(189, 255, 239, 0.8);
   --lightDark-primary: #046c4c;
   --veryDark-primary: #75ffd6;
   --bg-main: #fff;
