@@ -933,6 +933,7 @@ button {
 
     button{
       margin-inline: auto;
+      width: 100%;
     }
   }
 
@@ -945,6 +946,8 @@ button {
 
       button{
         margin: 0;
+
+        width: max-content;
       }
     }
   }
