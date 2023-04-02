@@ -7,6 +7,8 @@ import DarkLight from "../components/DarkLight";
 import Hero from "../components/Hero";
 import MainImage from "../components/MainImage";
 import Service from "../components/Service";
+import CompanyLogos from "../components/CompanyLogos";
+import Categories from "../components/Categories";
 
 const tl = gsap.timeline({
   ease: "power3.out",
@@ -22,6 +24,8 @@ const Home = () => {
       <Hero tl={tl} />
       <MainImage />
       <Service />
+      <CompanyLogos />
+      <Categories />
       <div style={{ height: "100vh" }}></div>
     </>
   );

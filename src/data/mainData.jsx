@@ -88,4 +88,17 @@ const ServiceSection = [
   ],
 ];
 
-export { logoName, menuNavigationLinks, heroSection, ServiceSection };
+const CategoriesData = [
+  {
+    br: "Explore Data",
+    mainHeading: "by category",
+    mainDesc: "Find the right data from more than 560+ data categories.",
+  },
+];
+export {
+  logoName,
+  menuNavigationLinks,
+  heroSection,
+  ServiceSection,
+  CategoriesData,
+};
