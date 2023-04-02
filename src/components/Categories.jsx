@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CategoriesData } from "../data/mainData";
 import SearchInput from "./SearchInput";
 import { Link } from "react-router-dom";
+import { gsap } from "gsap";
 
 const Categories = () => {
+  useEffect(() => {
+    gsap.to(".Categories .main-section", {
+      scrollTrigger: {
+        trigger: ".Categories",
+        start: "top 100%",
+        end: "bottom 100%",
+        // markers: true,
+        scrub: 1,
+      },
+      y: 0,
+      opacity: 1,
+    });
+    gsap.to(".Categories .container", {
+      scrollTrigger: {
+        trigger: ".Categories",
+        start: "top 100%",
+        end: "bottom 100%",
+        // markers: true,
+        scrub: 1,
+      },
+      y: 0,
+      opacity: 1,
+    });
+  }, []);
   return (
     <div className="Categories max">
       <span className="sub-text">categories</span>

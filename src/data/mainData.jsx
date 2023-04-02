@@ -113,10 +113,20 @@ const CategoriesData = [
     "Hospitality, Travel & Tourism Data",
   ],
 ];
+
+const PopularSectionData = [
+  {
+    br: "Popular data",
+    mainHeading: "products",
+    mainDesc:
+      "Find the right data product for your use case. Preview data samples and compare pricing options.",
+  },
+];
 export {
   logoName,
   menuNavigationLinks,
   heroSection,
   ServiceSection,
   CategoriesData,
+  PopularSectionData,
 };

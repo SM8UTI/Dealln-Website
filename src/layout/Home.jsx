@@ -9,6 +9,7 @@ import MainImage from "../components/MainImage";
 import Service from "../components/Service";
 import CompanyLogos from "../components/CompanyLogos";
 import Categories from "../components/Categories";
+import PopularSection from "../components/PopularSection";
 
 const tl = gsap.timeline({
   ease: "power3.out",
@@ -17,7 +18,7 @@ const tl = gsap.timeline({
 const Home = () => {
   return (
     <>
-      {/* <Loder tl={tl} /> */}
+      <Loder tl={tl} />
       <FixedElem />
       <DarkLight />
       <Header />
@@ -26,6 +27,7 @@ const Home = () => {
       <Service />
       <CompanyLogos />
       <Categories />
+      {/* <PopularSection /> */}
       <div style={{ height: "100vh" }}></div>
     </>
   );
