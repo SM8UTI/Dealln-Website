@@ -1,29 +1,29 @@
 import React from "react";
 import image from "../Assets/logoCompany-2.svg";
+import { Link } from "react-router-dom";
 
-const DatainfoCard = () => {
+const DatainfoCard = ({ title="", comapnyName="", comapnyLogo="", desc="", link="" }) => {
   return (
     <div className="DatainfoCard">
       <div className="text-container">
-        <h3>
-          BIGDBM USA Consumer, Demographic, Interest Database, Property and
-          Intender FIle
-        </h3>
+        <h3>{title}</h3>
         <div className="companyDetails">
           <h4>
-            <span>by</span> BIGDBM
+            <span>by</span> {comapnyName}
           </h4>
           <div className="companyLogo">
-            <img src={image} alt="" />
+            <img src={image} alt={comapnyLogo} />
           </div>
         </div>
-        <p>
-          The BIGDBM Consumer Database is comprised of over 80 sources and
-          includes over 400 different data points for each individual in a
-          household with complete PII...
-        </p>
+        <p>{desc}...</p>
       </div>
-      <div className="button-container"></div>
+      <div className="button-container">
+        <Link to={link} className="btn">
+          <span> View product</span>
+          <span> View product</span>
+        </Link>
+        <p>Pricing available upon request</p>
+      </div>
     </div>
   );
 };

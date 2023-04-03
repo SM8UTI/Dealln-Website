@@ -27,7 +27,7 @@ const Home = () => {
       <Service />
       <CompanyLogos />
       <Categories />
-      {/* <PopularSection /> */}
+      <PopularSection />
       <div style={{ height: "100vh" }}></div>
     </>
   );

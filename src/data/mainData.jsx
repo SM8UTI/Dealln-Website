@@ -122,6 +122,57 @@ const PopularSectionData = [
       "Find the right data product for your use case. Preview data samples and compare pricing options.",
   },
 ];
+
+const PopularCardData = [
+  {
+    title:
+      "BIGDBM USA Consumer, Demographic, Interest Database, Property and Intender FIle",
+    comapnyName: "BIGDBM",
+    comapnyLogo: "#",
+    desc: "The BIGDBM Consumer Database is comprised of over 80 sources and includes over 400 different data points for each individual in a household with complete PII",
+    link: "#",
+  },
+  {
+    title:
+      "BIGDBM USA Consumer, Demographic, Interest Database, Property and Intender FIle",
+    comapnyName: "BIGDBM",
+    comapnyLogo: "#",
+    desc: "The BIGDBM Consumer Database is comprised of over 80 sources and includes over 400 different data points for each individual in a household with complete PII",
+    link: "#",
+  },
+  {
+    title:
+      "Factori_Identity Data ( Hashed email linked to unique Id with UID2.0)",
+    comapnyName: "Factori",
+    comapnyLogo: "#",
+    desc: "Our identity graph data can help brands attach identities to their existing first party data in a safe and privacy compliant manner, resulting in the ability",
+    link: "#",
+  },
+  {
+    title:
+      "Factori_Identity Data ( Hashed email linked to unique Id with UID2.0)",
+    comapnyName: "Factori",
+    comapnyLogo: "#",
+    desc: "Our identity graph data can help brands attach identities to their existing first party data in a safe and privacy compliant manner, resulting in the ability",
+    link: "#",
+  },
+  {
+    title:
+      "Factori_Identity Data ( Hashed email linked to unique Id with UID2.0)",
+    comapnyName: "Factori",
+    comapnyLogo: "#",
+    desc: "Our identity graph data can help brands attach identities to their existing first party data in a safe and privacy compliant manner, resulting in the ability",
+    link: "#",
+  },
+  {
+    title:
+      "Factori_Identity Data ( Hashed email linked to unique Id with UID2.0)",
+    comapnyName: "Factori",
+    comapnyLogo: "#",
+    desc: "Our identity graph data can help brands attach identities to their existing first party data in a safe and privacy compliant manner, resulting in the ability",
+    link: "#",
+  },
+];
 export {
   logoName,
   menuNavigationLinks,
@@ -129,4 +180,5 @@ export {
   ServiceSection,
   CategoriesData,
   PopularSectionData,
+  PopularCardData,
 };
