@@ -1143,3 +1143,92 @@ button {
     gap: 1rem;
   }
 }
+
+.FAQSection {
+  margin-top: 6rem;
+  padding: 1rem;
+
+  .main-text {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    translate: 0 400px;
+    opacity: 0;
+    h2 {
+      text-transform: capitalize;
+      span {
+        background-image: url(../Assets/Stroke.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+      }
+    }
+    p {
+      max-width: 500px;
+    }
+  }
+
+  .container {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    translate: 0 400px;
+    opacity: 0;
+  }
+}
+
+.FAQQuestionCard {
+  background-color: var(--bgs-primary);
+  border: 2px solid var(--bg-primary);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  // gap: 2rem;
+  transition: gap 0.3s ease-in-out;
+  border-radius: 0.5rem;
+  .question {
+    cursor: pointer;
+    position: relative;
+    margin-left: 4rem;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      translate: 0 -50%;
+      left: -3.5rem;
+      border-radius: 1rem;
+      filter: blur(10px);
+      width: 20px;
+      aspect-ratio: 1;
+      background-color: var(--bg-primary);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      translate: 0 -50%;
+      left: -3.5rem;
+      border-radius: 1rem;
+      // filter: blur(10px);
+      width: 20px;
+      aspect-ratio: 1;
+      background-color: var(--bg-primary);
+    }
+  }
+
+  .answer {
+    height: 0;
+    // height: max-content;
+    overflow: hidden;
+    transition: height 0.8s ease-in-out;
+  }
+}
+
+.FAQQuestionCard.active {
+  gap: 2rem;
+  .answer {
+    height: max-content;
+  }
+}

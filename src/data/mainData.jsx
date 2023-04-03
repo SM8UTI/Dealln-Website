@@ -173,6 +173,30 @@ const PopularCardData = [
     link: "#",
   },
 ];
+
+const FAQSectionData = [
+  {
+    text: "What technologies do you work with?",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit in odit esse deserunt quas modi praesentium placeat nam, ratione porro iure velit illo facilis veniam!",
+  },
+  {
+    text: "How do you ensure a high adoption rate of the solutions?",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit in odit esse deserunt quas modi praesentium placeat nam, ratione porro iure velit illo facilis veniam! deserunt quas modi praesentium placeat nam, ratione porro iure velit illo facilis veniam!",
+  },
+  {
+    text: "What is your approach when starting a new initiative?",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit in odit esse deserunt quas modi praesentium placeat nam, ratione porro iure velit illo facilis veniam! ",
+  },
+  {
+    text: "What technologies do you work with?",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit in odit esse deserunt quas modi praesentium placeat nam, ratione porro iure velit illo facilis veniam! deserunt quas modi praesentium placeat nam, ratione porro iure velit illo facilis veniam! deserunt quas modi praesentium placeat nam, ratione porro iure velit illo facilis veniam!",
+  },
+  {
+    text: "Do you work with partners of all sizes?",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit in odit esse deserunt quas modi praesentium placeat nam, ratione porro iure velit illo facilis veniam!",
+  },
+];
+
 export {
   logoName,
   menuNavigationLinks,
@@ -181,4 +205,5 @@ export {
   CategoriesData,
   PopularSectionData,
   PopularCardData,
+  FAQSectionData,
 };

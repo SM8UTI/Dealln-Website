@@ -2,7 +2,13 @@ import React from "react";
 import image from "../Assets/logoCompany-2.svg";
 import { Link } from "react-router-dom";
 
-const DatainfoCard = ({ title="", comapnyName="", comapnyLogo="", desc="", link="" }) => {
+const DatainfoCard = ({
+  title = "",
+  comapnyName = "",
+  comapnyLogo = "",
+  desc = "",
+  link = "",
+}) => {
   return (
     <div className="DatainfoCard">
       <div className="text-container">
