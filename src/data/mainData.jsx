@@ -197,6 +197,14 @@ const FAQSectionData = [
   },
 ];
 
+const footer = {
+  title: "Dealln",
+  desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem hic iusto nulla dolore nesciunt dicta cum sed, recusandae totam possimus perspiciatis tenetur est, corrupti officia.",
+  copyright: "Copyright 2022 Dealln. All rights reserved.",
+};
+
+const footerDetails = [{}];
+
 export {
   logoName,
   menuNavigationLinks,
@@ -206,4 +214,6 @@ export {
   PopularSectionData,
   PopularCardData,
   FAQSectionData,
+  footer,
+  footerDetails,
 };

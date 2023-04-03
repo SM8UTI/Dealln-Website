@@ -11,6 +11,7 @@ import CompanyLogos from "../components/CompanyLogos";
 import Categories from "../components/Categories";
 import PopularSection from "../components/PopularSection";
 import FAQSection from "../components/FAQSection";
+import Footer from "../components/Footer";
 
 const tl = gsap.timeline({
   ease: "power3.out",
@@ -30,7 +31,7 @@ const Home = () => {
       <Categories />
       <PopularSection />
       <FAQSection />
-      <div style={{ height: "100vh" }}></div>
+      <Footer />
     </>
   );
 };

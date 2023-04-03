@@ -43,7 +43,7 @@ const FAQSection = () => {
       </div>
       <div className="container">
         {FAQSectionData.map((elem, index) => (
-          <FAQQuestionCard text={elem.text} desc={elem.desc} />
+          <FAQQuestionCard key={index} text={elem.text} desc={elem.desc} />
         ))}
       </div>
     </div>
