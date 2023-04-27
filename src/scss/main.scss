@@ -27,7 +27,7 @@
   --bg-main: #fff;
   --bg-primary: #0dd8a4;
   --text: #344251;
-  --sub-text: #a3a3a3;
+  --sub-text: rgb(102, 102, 102);
   --btn-text: #fff;
   --button: #344251;
 }
@@ -1025,6 +1025,7 @@ button {
   color: var(--bg-primary);
   position: relative;
   max-width: max-content;
+  margin-top: 1rem;
 
   div {
     display: grid;
@@ -1231,6 +1232,7 @@ button {
     // height: max-content;
     overflow: hidden;
     transition: height 0.8s ease-in-out;
+    margin-left: 4.8rem;
   }
 }
 
@@ -1266,10 +1268,10 @@ button {
     }
   }
 
-  .copyright{
+  .copyright {
     text-align: center;
     margin-top: 6rem;
-    border-top:2px solid var(--bg-primary) ;
+    border-top: 2px solid var(--bg-primary);
     padding-top: 4em;
     padding-bottom: 3rem;
   }
@@ -1295,7 +1297,7 @@ button {
         margin-inline: auto;
       }
 
-      .navigation-links{
+      .navigation-links {
         text-align: left;
         justify-content: space-between;
         padding: 1rem;
@@ -1321,6 +1323,96 @@ button {
             }
           }
         }
+      }
+    }
+  }
+}
+
+.swiper_container {
+  // height: 52rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.swiper-slide {
+  width: 500px;
+  // height: 42rem;
+  height: 280px;
+  position: relative;
+}
+
+@include breakpoint-down(small){
+.swiper-slide{
+  width: 300px;
+  height: 250px;
+}
+}
+
+@include breakpoint-down(large) {
+  .swiper_container {
+    padding-bottom: 6rem;
+  }
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+  opacity: 0;
+}
+
+.Testomonials {
+  padding: 1rem;
+  margin-top: 6rem;
+  .main-section {
+    translate: 0 0;
+    opacity: 1;
+  }
+
+  .container{
+    margin-top: 4rem;
+    // margin-bottom: 3rem;
+  }
+}
+
+.TestomonialsCard {
+
+  background-color: var(--bgs-primary);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  gap: 2rem;
+  border-radius: 1rem;
+
+  .message{
+    color: var(--btn-text);
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .info{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    .img{
+      width: 80px;
+      aspect-ratio: 1;
+      border: 2px solid var(--bg-primary);
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .data{
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+
+      h4{
+        font-size: 2rem;
       }
     }
   }

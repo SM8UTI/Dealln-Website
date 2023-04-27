@@ -7,11 +7,12 @@ import DarkLight from "../components/DarkLight";
 import Hero from "../components/Hero";
 import MainImage from "../components/MainImage";
 import Service from "../components/Service";
-import CompanyLogos from "../components/CompanyLogos";
+
 import Categories from "../components/Categories";
 import PopularSection from "../components/PopularSection";
 import FAQSection from "../components/FAQSection";
 import Footer from "../components/Footer";
+import Testomonials from "../components/Testomonials";
 
 const tl = gsap.timeline({
   ease: "power3.out",
@@ -20,16 +21,17 @@ const tl = gsap.timeline({
 const Home = () => {
   return (
     <>
-      <Loder tl={tl} />
+      {/* <Loder tl={tl} /> */}
       <FixedElem />
       <DarkLight />
       <Header />
       <Hero tl={tl} />
       <MainImage />
       <Service />
-      <CompanyLogos />
+
       <Categories />
       <PopularSection />
+      <Testomonials />
       <FAQSection />
       <Footer />
     </>
