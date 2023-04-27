@@ -637,14 +637,14 @@ h3 {
     display: grid;
     gap: 3rem;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(small) {
       // place-content: center;
       .main-text {
         max-width: 1000px !important;
         margin-inline: auto;
 
         h2 {
-          font-size: 8rem !important;
+          font-size: 6rem !important;
         }
       }
 
@@ -654,6 +654,14 @@ h3 {
         flex-wrap: wrap;
         p {
           max-width: 800px !important;
+        }
+      }
+    }
+
+    @include breakpoint(large) {
+      .main-text {
+        h2 {
+          font-size: 8rem !important;
         }
       }
     }
@@ -675,8 +683,6 @@ h3 {
       gap: 0rem;
       // border: 2px solid red;
       width: 100%;
-
-
 
       h2 {
         translate: -1000px 0;
